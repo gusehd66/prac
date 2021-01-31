@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>김현동의 HTML</title>
+    <meta name="description" content="김현동의 HTML" />
+    <meta name="keywords" content="김현동, HTML, 김현동의HTML" />
+    <meta name="author" content="Hyundong" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- user-scalable 을 사용하지 않는 디바이스를 위해, maximun-scale/minimum-scale 설정을 하는 것입니다-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Open Graph (Facebook, Linkedin) -->
+    <!-- https://ourcodeworld.com/public-media/articles/articleocw-56d1a6901b773.png -->
+    <meta propery="og:type" content="website" />
+    <!-- https://ogp.me/#types -->
+    <meta property="og:title" content="김현동의 HTML 연습용 사이트입니다" />
+    <meta property="og:description" content="HTML,CSS,JS 공부용입니다" />
+    <meta property="og:image" content="img/des.jpg" />
+    <meta property="og:url" content="https://gusehd66.github.io/practice/" />
+    <meta property="og:site_name" content="김현동의 HTML" />
+
+    <!-- twitter card (Twitter) -->
+    <!-- https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/twitter-cards-implementation-with-websites/Images/summary_card_tweet.png -->
+    <meta name="twitter:card" content="summary" />
+    <!-- card 종류: summary, photo, player -->
+    <meta name="twitter:title" content="김현동의 HTML 연습용 사이트입니다" />
+    <meta name="twitter:description" content="HTML,CSS,JS 공부용입니다" />
+    <meta name="twitter:image" content="img/des.jpg" />
+    <meta name="twitter:url" content="https://gusehd66.github.io/practice/" />
+    <meta name="twitter:creator" content="Hyundong" />
+
+    <!-- 일반적인 fabicon 설정 -->
+    <link rel="icon" href="img/fun-coding.ico" />
+    <!-- 아이폰용 fabicon 설정 -->
+    <link rel="apple-touch-icon" href="img/fun-coding.ico" />
+    <!-- 인터넷 익스플러오용 fabicon 설정-->
+    <link rel="short icon" type="image/x-icon" href="img/fun-coding.ico" />
+
+    <!-- CSS Reset(1), 아이콘 폰트, 웹페이지 사용폰트, style.css -->
+    <link rel="stylesheet" href="css/nomalize.css" />
+    <!-- https://fontawesome.com/start -->
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+    <!-- Spoca Han Sans Neo: https://spoqa.github.io/spoqa-han-sans/ko-KR/ -->
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- CSS class naming (BEM 명명규칙: Block Element Modifier 순으로 작성)
+    __ : ~ 의 하위 요소를(속해있는) 나타냄
+    -- : ~ 의 상태를 나타냄(수정한다 라는 느낌)
+    - : 단어와 단어사이는 하이픈 (BlueBox X, blueBox X, blue_box X, blue-box O)
+    예를 들어, box-container__title--blue 와 같이 작성할 수 있음 (참고로만 알아두면 됨)
+    -->
+
+    <!-- 항상 화면을 100% 로 사용하면, 와이드 스크린에서 웹페이지가 기대와 달리 보일 수 있음 -->
+
+    <!-- header 에 상단 메뉴까지 넣을 예정 -->
+    <!-- 전체 layout 는 시멘틱 태그로 구성하고,
+      각 layout component 는 width를 100% 로 하되,
+      해당 component 에 들어가는 요소들은 특정 가로 사이즈 이상에서는 특정 사이즈로 가운데에 정렬되도록,
+      inner 클래스로 감싸주기로 함
+      각 하부 요소 배치를 위해서는 각 layout 별 container 로 정의해주기로 함
+    -->
+    <header>
+      <div class="inner">
+        <div class="head-container">
+          <div class="head-brand">안녕하세요.</div>
+          <div class="head-blog">김현동의 공부용 홈페이지 입니다.</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 이미지 섹션 -->
+    <section class="main">
+      <div class="main-container">
+        <div class="inner">
+          <div class="title-container">
+            <!-- 크롬 개발자 모드에서 toogle device toolbar 선택 (왼쪽 상단 두번째 메뉴)
+              iPhone X 로 선택한 후, 최종 확인 후, 관련 코드 수정
+            -->
+            <div class="title">강아지를 소개합니다.</div>
+            <div class="message">
+              <span>사람보다</span> 비싼 옷과, <br />
+              <span>사람보다</span> 비싼 장난감,<br />
+              <span>사람보다</span> 비싼 집<br />
+              저도 구경만 해보겠습니다.<br />
+              <span class="news"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="skill-container">
+          <div class="skill">
+            <i class="fas fa-dog skill-icon dog-style"></i>
+            <div class="skill-title">
+              <div class="skill-name">Dog</div>
+              <div class="skill-usage">귀여운 강아지들</div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-tshirt skill-icon style-style"></i>
+            <div class="skill-title">
+              <div class="skill-name">Style</div>
+              <div class="skill-usage">패션/올인원</div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-football-ball skill-icon toy-style"></i>
+            <div class="skill-title">
+              <div class="skill-name">Toy</div>
+              <div class="skill-usage">즐거운 장난감</div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-bone skill-icon food-style"></i>
+            <div class="skill-title">
+              <div class="skill-name">Food (준비중)</div>
+              <div class="skill-usage">맛있는 간식들</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container">
+            <div class="roadmap-title">귀여운 강아지들</div>
+            <div class="arrow-container">
+              <i class="fas fa-chevron-circle-left slide-prev"></i>
+              <i class="fas fa-chevron-circle-right slide-next"></i>
+            </div>
+          </div>
+          <!-- HTML5 에서는 태그에 확장처리를 위한 속성으로 data-* 속성 추가
+            data-변수이름=변수값 으로 정의하고, JS 등에서 활용 가능
+          -->
+          <ul class="class-list" data-position="0">
+            <li class="class-card">
+              <img src="https://images.mypetlife.co.kr/content/uploads/2019/09/04222847/dog-panting.jpg" alt="웰시코기" class="class-image" />
+              <a href="https://www.google.com/search?q=%EC%9B%B0%EC%8B%9C%EC%BD%94%EA%B8%B0&tbm=isch&ved=2ahUKEwi178T_ycDuAhUGBJQKHVDADGwQ2-cCegQIABAA&oq=%EC%9B%B0%EC%8B%9C%EC%BD%94%EA%B8%B0&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCABQ6m9Y7nhgnHpoA3AAeAOAAWqIAcEHkgEDOS4ymAEAoAEBqgELZ3dzLXdpei1pbWewAQDAAQE&sclient=img&ei=pbMTYPWII4aI0ATQgLPgBg&bih=1013&biw=2114&hl=ko" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">코비</div>
+                    <div class="class-format">Search</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">웰시코기</div>
+                    <div class="class-detail">"엉덩이가 매력적"</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="http://www.primepet.co.kr/upload/board_community/Nega_bd_community2_1142.jpg" alt="잔재미코딩 서적" class="class-image" />
+              <a href="https://www.google.com/search?q=%EB%B9%84%EA%B8%80&tbm=isch&ved=2ahUKEwj9gbTkycDuAhUSx4sBHUCIBcAQ2-cCegQIABAA&oq=%EB%B9%84%EA%B8%80&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCABQ6q4DWPaxA2DOsgNoAXAAeAGAAaYBiAHUA5IBAzIuMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=bLMTYP2bKZKOr7wPwJCWgAw&bih=1013&biw=2114&hl=ko" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">바둑이</div>
+                    <div class="class-format">Search</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">비글</div>
+                    <div class="class-detail">"장난꾸러기의 대명사"</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://cdn.imweb.me/upload/S2019120709700dc9b8bb8/6a58f48e6d968.jpg" alt="잔재미코딩 서적" class="class-image" />
+              <a href="https://www.google.com/search?q=%ED%91%B8%EB%93%A4&tbm=isch&ved=2ahUKEwjAw7uHysDuAhVM0ZQKHXvBDksQ2-cCegQIABAA&oq=%ED%91%B8%EB%93%A4&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6CAgAELEDEIMBUKGTAVjnlQFghpcBaAFwAHgBgAFiiAHcA5IBATWYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=trMTYMCQDMyi0wT7grvYBA&bih=1013&biw=2114&hl=ko" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">동동</div>
+                    <div class="class-format">Search</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">푸들</div>
+                    <div class="class-detail">"똑똑하고 애교쟁이"</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://cdn.imweb.me/upload/S2019120709700dc9b8bb8/0e670861e06b5.jpg" alt="잔재미코딩 서적" class="class-image" />
+              <a href="https://www.google.com/search?q=%EB%A7%90%ED%8B%B0%EC%A6%88&tbm=isch&ved=2ahUKEwiumoeRysDuAhWDG6YKHWlSAq8Q2-cCegQIABAA&oq=%EB%A7%90%ED%8B%B0%EC%A6%88&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6CAgAELEDEIMBUMT-BFiOggVgpYMFaAJwAHgCgAFuiAHPBZIBAzEuNpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=yrMTYK6NE4O3mAXppIn4Cg&bih=1013&biw=2114&hl=ko" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">백설기</div>
+                    <div class="class-format">Search</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">말티즈</div>
+                    <div class="class-detail">"하얀 눈덩이 같은 매력"</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://cdn.imweb.me/upload/S201805185afe0684ef3d8/5cee2a07d10ec.jpg" alt="잔재미코딩 서적" class="class-image" />
+              <a href="https://www.google.com/search?q=%EA%B3%A8%EB%93%A0%EB%A6%AC%ED%8A%B8%EB%A6%AC%EB%B2%84&tbm=isch&ved=2ahUKEwin29a4ysDuAhXCApQKHbhOCqUQ2-cCegQIABAA&oq=%EA%B3%A8%EB%93%A0%EB%A6%AC%ED%8A%B8%EB%A6%AC%EB%B2%84&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgAEBg6BggAEAoQGFDLrgNY5MMDYI_FA2gGcAB4A4ABpAGIAe0MkgEDOS43mAEAoAEBqgELZ3dzLXdpei1pbWewAQDAAQE&sclient=img&ei=HbQTYOfYGMKF0AS4namoCg&bih=1013&biw=2114&hl=ko" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">인절미</div>
+                    <div class="class-format">Search</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">골든리트리버</div>
+                    <div class="class-detail">"귀여운 외모와 순한 성격"</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container">
+            <div class="roadmap-title">패션/올인원</div>
+            <div class="arrow-container">
+              <i class="fas fa-chevron-circle-left slide-prev"></i>
+              <i class="fas fa-chevron-circle-right slide-next"></i>
+            </div>
+          </div>
+          <!-- HTML5 에서는 태그에 확장처리를 위한 속성으로 data-* 속성 추가
+            data-변수이름=변수값 으로 정의하고, JS 등에서 활용 가능
+          -->
+          <ul class="class-list" data-position="0">
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1606194115/thumb-7Yyo65Sp_600x600.jpg" alt="잔재미코딩 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1606194115" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">바닐라 패딩</div>
+                    <div class="class-detail">할인가: 26,400 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1606291567/thumb-13_600x600.jpg" alt="잔재미코딩 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1606291567" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">멍깔이</div>
+                    <div class="class-detail">할인가: 24,300 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1606291856/thumb-7_600x600.jpg" alt="잔재미코딩 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1606291856" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">페어리 맨투맨</div>
+                    <div class="class-detail">할인가: 19,400 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1606292093/thumb-5_600x600.jpg" alt="잔재미코딩 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1606292093" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">워미 목폴라티</div>
+                    <div class="class-detail">할인가: 14,500 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1603354394/thumb-202004076rCV7JWE7KeA0508_600x600.jpg" alt="잔재미코딩 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1603354394" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">코듀로이 가디건</div>
+                    <div class="class-detail">할인가: 32,000 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container">
+            <div class="roadmap-title">장난감</div>
+            <div class="arrow-container">
+              <i class="fas fa-chevron-circle-left slide-prev"></i>
+              <i class="fas fa-chevron-circle-right slide-next"></i>
+            </div>
+          </div>
+          <ul class="class-list" data-position="0">
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1601364520/thumb-7Jyg66C57I2464Sk7J281_600x600.jpg" alt="잔재미코딩 컴퓨터 공학 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1601364520" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">숨은 유령 찾기</div>
+                    <div class="class-detail">정가: 20,000 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1601363540/thumb-7I2464Sk7J281_600x600.jpg" alt="잔재미코딩 컴퓨터 공학 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1601363540" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">숨은 다람쥐 찾기</div>
+                    <div class="class-detail">정가: 35,000 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="class-card">
+              <img src="https://hoono.kr/data/item/1599813513/thumb-66y47Ja07I2464Sk7J28_600x600.jpg" alt="잔재미코딩 알고리즘 강의" class="style-image" />
+              <a href="https://hoono.kr/shop/item.php?it_id=1599813513" target="_blank">
+                <div class="class-container">
+                  <div class="class-skill">
+                    <div class="class-type">HOONO</div>
+                    <div class="class-format">바로가기</div>
+                  </div>
+                  <div class="class-desc">
+                    <div class="class-title">바스락 삑삑 문어</div>
+                    <div class="class-detail">할인가: 5,600 원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- footer 를 넣을 예정-->
+    <footer>
+      <div class="inner">
+        <div class="footer-message">재밌는 코딩 공부, 고수가 되는 그날 까지</div>
+        <div class="footer-contact">컨택: rlagusehd45@gmail.com</div>
+        <div class="footer-copyright">Copyright 2021 © All rights reserved.</div>
+      </div>
+    </footer>
+    <a id="backtotop"></a>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script type="text/babel" src="js/main.js"></script>
+    <script type="text/babel" src="js/comm.js"></script>
+  </body>
+</html>
